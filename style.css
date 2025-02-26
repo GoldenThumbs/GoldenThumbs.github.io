@@ -22,42 +22,39 @@
 }
 
 .header {
-   padding: 32px;
+   padding: 2vmin;
+   margin: 0;
    column-width: 100%;
-   min-height: 128px;
    background-color: var(--col_bg1);
    font-family: LTRenovate;
-   font-size: 300%;
-   text-wrap: nowrap;
+   font-size: 4vw;
    text-align: center;
-   white-space: nowrap;
    overflow: hidden;
    color: var(--col-main3);
 }
 
 .top-bar {
-   padding: 4px;
+   padding: 0.5vmin;
    padding-top: 0;
    display: flex;
-   line-height: 1vw;
-   min-height: 38px;
+   line-height: 1vh;
    flex-direction: row;
    flex-wrap: nowrap;
    justify-content: center;
    overflow: hidden;
-   background: linear-gradient(to bottom, var(--col-main3) 15%, var(--col_bg1) 15%);
+   background: linear-gradient(to bottom, var(--col-main3) 0.7vw, var(--col_bg1) 0.7vw);
 }
 
 .page-tab {
-   border-radius: 0 0 1ex 1ex;
-   padding: 4px 3% 4px;
+   border-radius: 0 0 1vw 1vw;
+   padding: 0.5vmax 3% 0.5vmax;
    width: auto;
    line-height: 100%;
-   margin-left: 4px;
-   margin-right: 4px;
+   margin-left: 0.5vw;
+   margin-right: 0.5vw;
    background: linear-gradient(to top, color-mix(in srgb, var(--col-main3), var(--col-main1) 70%) var(--fac), var(--col-main3) var(--fac));
    font-family: LTRenovate;
-   font-size: 200%;
+   font-size: 3vw;
    text-wrap: nowrap;
    text-align: center;
    text-decoration: none;
@@ -69,7 +66,7 @@
 
 .page-tab:active, .page-tab-active {
    background: color-mix(in srgb, var(--col-main3), var(--col-main1) 80%);
-   text-shadow: 0 3px 8px black;
+   text-shadow: 0 0.2vmin 0.8vmin black;
    color: var(--col-main3);
 
    transition: 0;
@@ -77,7 +74,7 @@
 
 .page-tab:hover:not(.page-tab-active) {
    --fac: 100%;
-   text-shadow: 0 5px 4px var(--col-main1);
+   text-shadow: 0 0.3vmin 0.5vmin var(--col-main1);
    color: var(--col-main3);
 }
 
@@ -85,15 +82,15 @@
    display: flex;
    flex-wrap: nowrap;
    flex-direction: row;
-   height: 100vh;
-   padding: 0.5ex;
+   height: 100vmax;
+   padding: 0.5vmin;
 }
 
 .content-box > div {
    background-color: var(--col_bg1);
-   padding: 0.5ex;
+   padding: 0.5vmin;
    height: 100%;
-   margin: 0.5ex;
+   margin: 0.5vmin;
 }
 
 @keyframes page-load-anim {
@@ -106,10 +103,6 @@
    }
 }
 
-/* slot {
-   animation: page-load-anim 0.5s linear 0.05s both;
-} */
-
 site-header > * {
    animation: page-load-anim 0.7s ease-in-out 0.05s both;
 }
@@ -119,4 +112,6 @@ body {
    background: linear-gradient(var(--col-main1), var(--col-main2));
    background-repeat: no-repeat;
    background-attachment: fixed;
+   font-size: 2vw;
+   color: var(--col-main3);
 }

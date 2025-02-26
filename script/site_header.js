@@ -11,7 +11,7 @@ header_template.innerHTML = `
    <div class="content-box">
       <slot name="site-content"></slot>
    </div>
-   <footer style="line-height: 20ex; text-align: center; color: var(--col-main3);">copyright Serenity Skiff 2025</footer>
+   <footer style="line-height: 10vw; text-align: center; font-size: 2vw; color: var(--col-main3);">copyright Serenity Skiff 2025</footer>
 `;
 
 // const active_page = header_template.id
