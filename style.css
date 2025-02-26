@@ -1,0 +1,29 @@
+@font-face {
+   font-family: LTRenovate;
+   src: url("assets/fonts/LTRenovate-Regular.otf");
+}
+
+@property --fac {
+   syntax: '<percentage>';
+   inherits: false;
+   initial-value: 0%;
+}
+
+:root {
+   --col-main1: #11353F;
+   --col-main2: #03161b;
+   --col-main3: #EBEFFE;
+   --col_bg1: #EBEFFE20;
+   --col_bg2: #FFFFFF8F;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   background: linear-gradient(var(--col-main1), var(--col-main2));
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}

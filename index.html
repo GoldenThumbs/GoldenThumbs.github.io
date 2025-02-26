@@ -4,112 +4,50 @@
       <title>Renny's Website</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-      
-      -
+      <link rel="stylesheet" href="/style.css" type="text/css">
+      <script src="/script/site_header.js" type="text/javascript" defer></script>
 
       <style>
-         @font-face {
-            font-family: LTRenovate;
-            src: url(assets/fonts/LTRenovate-Regular.otf);
-         }
-
-         @property --fac {
-            syntax: '<percentage>';
-            inherits: false;
-            initial-value: 0%;
-         }
-
-         :root {
-            --col-main1: #11353F;
-            --col-main2: #03161b;
-            --col-main3: #EBEFFE;
-            --col_bg1: #EBEFFE20;
-            --col_bg2: #FFFFFF8F;
-         }
-
-         * {
-            box-sizing: border-box;
-         }
-
-         body {
-            margin: 0;
-            background: linear-gradient(var(--col-main1), var(--col-main2));
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-         }
-
-         .header {
-            padding: 32px;
-            column-width: 100%;
-            min-height: 128px;
+         .content-fill {
             background-color: var(--col_bg1);
-            font-family: LTRenovate;
-            font-size: 300%;
-            text-wrap: nowrap;
-            text-align: center;
-            white-space: nowrap;
-            overflow: hidden;
-            color: var(--col-main3);
-         }
-         
-         .top-bar {
-            padding: 4px;
-            padding-top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 6px;
+            margin: 1ex;
             display: flex;
-            line-height: 1vw;
-            min-height: 38px;
-            flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(to bottom, var(--col-main3) 15%, var(--col_bg1) 15%);
+            flex-direction: row;
          }
 
-         .top-bar > div {
-            --fac: 0%;
-            border-radius: 0 0 1ex 1ex;
-            padding: 4px 3% 4px;
-            width: auto;
-            line-height: 100%;
-            margin-left: 4px;
-            margin-right: 4px;
-            background: var(--col-main3);
-            font-family: LTRenovate;
-            font-size: 200%;
-            text-wrap: nowrap;
-            text-align: center;
-            color: var(--col-main1);
+         .content-fill > div {
+            padding: 0.5ex;
+            height: 100%;
+            margin: 0.5ex;
          }
 
-         @keyframes button-anim {
-            from {
-               --fac: 0%;
-            }
-            to {
-               --fac: 100%;
-               background-position: 10% 0%;
-               text-shadow: 0 5px 4px var(--col-main1);
-               color: var(--col-main3);
-            }
+         .fill-side {
+            flex: 25%;
          }
-         
-         .top-bar > div:hover {
-            --fac: 100%;
-            background: linear-gradient(to top, color-mix(in srgb, var(--col-main3), var(--col-main1) 70%) var(--fac), var(--col-main3) var(--fac));
-            animation-name: button-anim;
-            animation-duration: 0.3s;
-            animation-fill-mode: both;
+
+         .fill-main {
+            flex: 75%;
          }
+
+         img {
+            border-radius: 2ex;
+            width: 100%;
+         }
+
       </style>
    </head>
 
-   <body>
-      <div class="header">Renny's Website</div>
-      <div class="top-bar">
-         <div>About Me</div>
-         <div>Link B</div>
-         <div>Link C</div>
-         <div>Link D</div>
+   <site-header>
+      <div class="content-fill" slot="site-content">
+         <div class="fill-side">
+            <img src="/assets/images/me1.jpg" alt="it me">
+         </div>
+         <div class="fill-main">Hello</div>
       </div>
-   </body>
+   </site-header>
+
 </html>
