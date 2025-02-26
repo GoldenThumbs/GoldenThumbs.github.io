@@ -96,6 +96,24 @@
    margin: 0.5ex;
 }
 
+@keyframes page-load-anim {
+   from {
+      opacity: 0%;
+   }
+
+   to {
+      opacity: 100%;
+   }
+}
+
+/* slot {
+   animation: page-load-anim 0.5s linear 0.05s both;
+} */
+
+site-header > * {
+   animation: page-load-anim 0.7s ease-in-out 0.05s both;
+}
+
 body {
    margin: 0;
    background: linear-gradient(var(--col-main1), var(--col-main2));
