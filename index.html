@@ -4,8 +4,13 @@
       <title>Renny's Website</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-      <link rel="stylesheet" href="/style.css" type="text/css">
-      <script src="/script/site_header.js" type="text/javascript" defer></script>
+      <link rel="stylesheet" href="/style.css">
+      <script src="/script/site_header.js" defer></script>
+      <script>
+         const page_id = 'about';
+      </script>
+
+      <base href="#p1">
 
       <style>
          .content-fill {
@@ -41,13 +46,15 @@
       </style>
    </head>
 
-   <site-header>
-      <div class="content-fill" slot="site-content">
-         <div class="fill-side">
-            <img src="/assets/images/me1.jpg" alt="it me">
+   <body>
+      <site-header>
+         <div class="content-fill" slot="site-content">
+            <div class="fill-side">
+               <img src="/assets/images/me1.jpg" alt="it me">
+            </div>
+            <div class="fill-main">Hello</div>
          </div>
-         <div class="fill-main">Hello</div>
-      </div>
-   </site-header>
+      </site-header>
+   </body>
 
 </html>

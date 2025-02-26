@@ -5,7 +5,7 @@
 
 @property --fac {
    syntax: '<percentage>';
-   inherits: false;
+   inherits: true;
    initial-value: 0%;
 }
 
@@ -19,6 +19,81 @@
 
 * {
    box-sizing: border-box;
+}
+
+.header {
+   padding: 32px;
+   column-width: 100%;
+   min-height: 128px;
+   background-color: var(--col_bg1);
+   font-family: LTRenovate;
+   font-size: 300%;
+   text-wrap: nowrap;
+   text-align: center;
+   white-space: nowrap;
+   overflow: hidden;
+   color: var(--col-main3);
+}
+
+.top-bar {
+   padding: 4px;
+   padding-top: 0;
+   display: flex;
+   line-height: 1vw;
+   min-height: 38px;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   overflow: hidden;
+   background: linear-gradient(to bottom, var(--col-main3) 15%, var(--col_bg1) 15%);
+}
+
+.page-tab {
+   border-radius: 0 0 1ex 1ex;
+   padding: 4px 3% 4px;
+   width: auto;
+   line-height: 100%;
+   margin-left: 4px;
+   margin-right: 4px;
+   background: linear-gradient(to top, color-mix(in srgb, var(--col-main3), var(--col-main1) 70%) var(--fac), var(--col-main3) var(--fac));
+   font-family: LTRenovate;
+   font-size: 200%;
+   text-wrap: nowrap;
+   text-align: center;
+   text-decoration: none;
+   text-shadow: 0;
+   color: var(--col-main1);
+
+   transition: 0.2s --fac ease-out;
+}
+
+.page-tab:active, .page-tab-active {
+   background: color-mix(in srgb, var(--col-main3), var(--col-main1) 80%);
+   text-shadow: 0 3px 8px black;
+   color: var(--col-main3);
+
+   transition: 0;
+}
+
+.page-tab:hover:not(.page-tab-active) {
+   --fac: 100%;
+   text-shadow: 0 5px 4px var(--col-main1);
+   color: var(--col-main3);
+}
+
+.content-box {
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: row;
+   height: 100vh;
+   padding: 0.5ex;
+}
+
+.content-box > div {
+   background-color: var(--col_bg1);
+   padding: 0.5ex;
+   height: 100%;
+   margin: 0.5ex;
 }
 
 body {
