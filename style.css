@@ -64,7 +64,7 @@
    transition: 0.2s --fac ease-out;
 }
 
-.page-tab:active, .page-tab-active {
+.page-tab-active {
    background: color-mix(in srgb, var(--col-main3), var(--col-main1) 80%);
    text-shadow: 0 0.2vmin 0.8vmin black;
    color: var(--col-main3);
