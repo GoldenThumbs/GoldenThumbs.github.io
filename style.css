@@ -1,6 +1,6 @@
 @font-face {
-   font-family: LTRenovate;
-   src: url("assets/fonts/LTRenovate-Regular.otf");
+   font-family: NaturalMono;
+   src: url("assets/fonts/NaturalMono-Regular.ttf");
 }
 
 @property --fac {
@@ -22,11 +22,12 @@
 }
 
 .header {
-   padding: 0.3em;
-   margin: 0;
+   padding: 0.15em 1em;
+   margin: 0.2em auto;
+   border-radius: 0.2em;
    column-width: 100%;
    background-color: var(--col_bg1);
-   font-family: LTRenovate;
+   font-family: NaturalMono;
    font-size: 3em;
    text-align: center;
    overflow: hidden;
@@ -52,7 +53,7 @@
    margin-left: 0.25em;
    margin-right: 0.25em;
    background: linear-gradient(to top, color-mix(in srgb, var(--col-main3), var(--col-main1) 70%) var(--fac), var(--col-main3) var(--fac));
-   font-family: LTRenovate;
+   font-family: NaturalMono;
    font-size: 1.5em;
    text-wrap: nowrap;
    text-align: center;
@@ -65,15 +66,16 @@
 
 .page-tab-active {
    background: color-mix(in srgb, var(--col-main3), var(--col-main1) 80%);
-   text-shadow: 0 0 0.3em black;
+   text-shadow: 0 0.1em 0.3em black;
    color: var(--col-main3);
-
+   overflow: hidden;
    transition: 0;
 }
 
 .page-tab:hover:not(.page-tab-active) {
    --fac: 100%;
-   text-shadow: 0 0.1em 0.2em var(--col-main1);
+   text-shadow: 0 0.2em 0.15em var(--col-main1);
+   overflow: hidden;
    color: var(--col-main3);
 }
 
@@ -91,7 +93,7 @@
    background-color: var(--col_bg1);
    width: 100%;
    padding: 0.8em;
-   margin: 0.6%;
+   margin: 0.5vmin;
    display: flex;
    flex-wrap: nowrap;
    flex-direction: column;
@@ -115,6 +117,17 @@ site-header > * {
    animation: page-load-anim 0.7s ease-in-out 0.05s both;
 }
 
+site-header {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   min-height: 100vh;
+}
+
+footer {
+   margin-top: auto;
+}
+
 body {
    margin: 0;
    background: linear-gradient(var(--col-main1), var(--col-main2));
@@ -122,4 +135,6 @@ body {
    background-attachment: fixed;
    font-size: 1.1em;
    color: var(--col-main3);
+
 }
+
