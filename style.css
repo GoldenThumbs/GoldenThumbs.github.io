@@ -22,39 +22,38 @@
 }
 
 .header {
-   padding: 2vmin;
+   padding: 0.3em;
    margin: 0;
    column-width: 100%;
    background-color: var(--col_bg1);
    font-family: LTRenovate;
-   font-size: 3vw;
+   font-size: 3em;
    text-align: center;
    overflow: hidden;
    color: var(--col-main3);
 }
 
 .top-bar {
-   padding: 0.5vmin;
+   padding: 1%;
    padding-top: 0;
    display: flex;
-   line-height: 1vh;
    flex-direction: row;
    flex-wrap: nowrap;
    justify-content: center;
    overflow: hidden;
-   background: linear-gradient(to bottom, var(--col-main3) 0.6vw, var(--col_bg1) 0.6vw);
+   background: linear-gradient(to bottom, var(--col-main3) 22%, var(--col_bg1) 22%);
 }
 
 .page-tab {
-   border-radius: 0 0 1vw 1vw;
-   padding: 0.5vmax 3% 0.5vmax;
+   border-radius: 0 0 0.5em 0.5em;
+   padding: 0.4em 0.7em 0.3em;
    width: auto;
-   line-height: 100%;
-   margin-left: 0.5vw;
-   margin-right: 0.5vw;
+   line-height: 1em;
+   margin-left: 0.25em;
+   margin-right: 0.25em;
    background: linear-gradient(to top, color-mix(in srgb, var(--col-main3), var(--col-main1) 70%) var(--fac), var(--col-main3) var(--fac));
    font-family: LTRenovate;
-   font-size: 1.5vw;
+   font-size: 1.5em;
    text-wrap: nowrap;
    text-align: center;
    text-decoration: none;
@@ -66,7 +65,7 @@
 
 .page-tab-active {
    background: color-mix(in srgb, var(--col-main3), var(--col-main1) 80%);
-   text-shadow: 0 0.2vmin 0.8vmin black;
+   text-shadow: 0 0 0.3em black;
    color: var(--col-main3);
 
    transition: 0;
@@ -74,7 +73,7 @@
 
 .page-tab:hover:not(.page-tab-active) {
    --fac: 100%;
-   text-shadow: 0 0.3vmin 0.5vmin var(--col-main1);
+   text-shadow: 0 0.1em 0.2em var(--col-main1);
    color: var(--col-main3);
 }
 
@@ -82,15 +81,24 @@
    display: flex;
    flex-wrap: nowrap;
    flex-direction: row;
-   height: 100vmax;
-   padding: 0.5vmin;
 }
 
 .content-box > div {
    background-color: var(--col_bg1);
-   padding: 0.5vmin;
-   height: 100%;
-   margin: 0.5vmin;
+}
+
+.content-fill {
+   background-color: var(--col_bg1);
+   width: 100%;
+   padding: 0.8em;
+   margin: 0.6%;
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: column;
+}
+
+.content-fill > div {
+   margin: 0.4em;
 }
 
 @keyframes page-load-anim {
@@ -112,6 +120,6 @@ body {
    background: linear-gradient(var(--col-main1), var(--col-main2));
    background-repeat: no-repeat;
    background-attachment: fixed;
-   font-size: 1.2vw;
+   font-size: 1.1em;
    color: var(--col-main3);
 }

@@ -3,15 +3,13 @@ header_template.innerHTML = `
    <link rel="stylesheet" href="/style.css" type="text/css">
    <div class="header">Renny's Website</div>
    <nav class="top-bar" id="top-bar">
-      <a id="about" class="page-tab" href="/index.html">About</a>
-      <a id="p1" class="page-tab" href="/pages/about.html">Temp</a>
-      <a id="p2" class="page-tab" href="/pages/about.html">Temp</a>
-      <a id="p3" class="page-tab" href="/pages/about.html">Temp</a>
+      <a id="about" class="page-tab" href="/index.html">About Me</a>
+      <a id="p1" class="page-tab" href="/pages/projects.html">My Projects</a>
    </nav>
    <div class="content-box">
       <slot name="site-content"></slot>
    </div>
-   <footer style="line-height: 10vw; text-align: center; font-size: 1vw; color: var(--col-main3);">copyright Serenity Skiff 2025</footer>
+   <footer style="line-height: 2em; text-align: center; font-size: 11pt; color: var(--col-main3);">copyright Serenity Skiff 2025</footer>
 `;
 
 // const active_page = header_template.id

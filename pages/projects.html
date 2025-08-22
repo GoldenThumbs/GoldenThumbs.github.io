@@ -13,11 +13,22 @@
    </script>
    <script src="/script/site_header.js" type="text/javascript" defer></script>
 
+   <style>
+      li > a {
+         color: var(--col-main3);
+      }
+   </style>
+
 </head>
 
 <body>
    <site-header>
-      <h1 style="text-align: center; width: 100%; color: var(--col-main3)" slot="site-content">Placeholder...</h1>
+      <div class="content-fill" slot="site-content">
+         <header style="width: 100%; text-align: center; font-size: 30pt;">Projects</header>
+         <ul>
+            <li><a href="https://github.com/GoldenThumbs/ector">Ector, a simple C11 game engine.</a></li>
+         </ul>
+      </div>
    </site-header>
 </body>
 
