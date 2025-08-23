@@ -4,7 +4,8 @@ header_template.innerHTML = `
    <div class="header">Renny's Website</div>
    <nav class="top-bar" id="top-bar">
       <a id="about" class="page-tab" href="/index.html">About Me</a>
-      <a id="p1" class="page-tab" href="/pages/projects.html">My Projects</a>
+      <a id="blog" class="page-tab" href="/pages/blog.html">Blog</a>
+      <a id="projects" class="page-tab" href="/pages/projects.html">Projects</a>
    </nav>
    <div class="content-box">
       <slot name="site-content"></slot>

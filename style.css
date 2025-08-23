@@ -113,6 +113,10 @@
    }
 }
 
+* {
+   scrollbar-color: var(--col-main3) var(--col-main1);
+}
+
 site-header > * {
    animation: page-load-anim 0.7s ease-in-out 0.05s both;
 }

@@ -2,14 +2,14 @@
 <html>
 
 <head>
-   <title>Renny's Website</title>
+   <title>Renny's Projects</title>
 
    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
    <link rel="stylesheet" href="/style.css" type="text/css">
    <link rel="icon" type="image/x-icon" href="/assets/images/dog_icon.svg">
 
    <script>
-      const page_id = 'p1';
+      const page_id = 'projects';
    </script>
    <script src="/script/site_header.js" type="text/javascript" defer></script>
 
@@ -17,6 +17,22 @@
       li > a {
          color: var(--col-main3);
       }
+
+      header {
+         padding: 0.2em 4em;
+         margin: 0.2em auto;
+         box-shadow: 0em 0.1em var(--col-main3);
+         color: var(--col-main3);
+         text-align: center;
+         font-size: 2em;
+      }
+
+      @media only screen and (max-width: 640px) {
+         header {
+            font-size: 1.5em;
+         }
+      }
+
    </style>
 
 </head>
@@ -24,9 +40,10 @@
 <body>
    <site-header>
       <div class="content-fill" slot="site-content">
-         <header style="width: 100%; text-align: center; font-size: 30pt;">Projects</header>
+         <header>Projects</header>
          <ul>
             <li><a href="https://github.com/GoldenThumbs/ector">Ector, a simple C11 game engine.</a></li>
+            <li><a href="https://opengameart.org/users/goldenthumbs">My free (CC0) art assets.</a></li>
          </ul>
       </div>
    </site-header>
